@@ -5,8 +5,8 @@
 |------|----|-------|
 | Murillo Kenzo | RM566948 | 2TDSPA |
 | Kauan Prado | RM566990 | 2TDSPA |
-| Cauã Rocha | RM 567593 | 2TDSPR |
-|  |  |  |
+| Cauã Rocha | RM567593 | 2TDSPR |
+| Gustavo Souza | RM567134 | 2TDSPR |
 
 ## Descricao da solucao
 API REST (Java Spring Boot) de apoio a uma solucao educativa sobre tecnologia nuclear. Cadastra aplicacoes da tecnologia nuclear (saude, agricultura, industria, energia, pesquisa). Roda em containers Docker numa VM do Azure, com banco Oracle.
@@ -34,7 +34,13 @@ Diagrama: `diagrama-arquitetura.png`
    ```
 2. Conectar: `ssh azureuser@IP_PUBLICO`
 3. Instalar Docker: `sudo apt update && sudo apt install -y docker.io docker-compose-v2 && sudo usermod -aG docker $USER` (reconectar)
-4. Clonar o repositorio e criar o `.env` a partir do `.env.example`
+4. Clonar o repositorio e criar o `.env`:
+   ```bash
+   git clone https://github.com/murillokenzo/devopsChallenge-Sprint1.git
+   cd devopsChallenge-Sprint1
+   cp .env.example .env
+   nano .env
+   ```
 5. Subir: `docker compose up -d --build`
 6. Aguardar ~2 min e testar: `curl http://localhost:8080/aplicacoes`
 
@@ -48,7 +54,6 @@ Diagrama: `diagrama-arquitetura.png`
 | DELETE | /aplicacoes/{id} | Remove |
 
 ## Testes
-CRUD completo pela API (minimo 5 registros, ver `init.sql`) e persistencia com `docker compose down` / `up -d`.
-
+CRUD completo pela API (5 registros criados via POST, alem dos 5 inseridos pelo `init.sql`), e persistencia com `docker compose down` / `up -d`, sem apagar o volume.
 ## Exclusao dos recursos
 `az group delete --name rg-challenge-nuclear --yes --no-wait`
