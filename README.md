@@ -22,7 +22,7 @@ Diagrama: `diagrama-arquitetura.png`
 | Ubuntu | 24.04 LTS |
 | Docker | 29.1.3 |
 | Docker Compose | 2.40.3 |
-| Azure CLI | PREENCHER (az version) |
+| Azure CLI | 2.91.0 (az version) |
 | Java / Spring Boot | 21 / 3.3.5 |
 | Oracle Free (imagem) | gvenzl/oracle-free:23-slim |
 
