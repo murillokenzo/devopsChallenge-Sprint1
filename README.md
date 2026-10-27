@@ -3,8 +3,10 @@
 ## Integrantes
 | Nome | RM | Turma |
 |------|----|-------|
-| Murillo Kenzo | PREENCHER | PREENCHER |
-| PREENCHER | PREENCHER | PREENCHER |
+| Murillo Kenzo | RM566948 | 2TDSPA |
+| Kauan Prado | RM566990 | 2TDSPA |
+| Cauã Rocha | RM 567593 | 2TDSPR |
+|  |  |  |
 
 ## Descricao da solucao
 API REST (Java Spring Boot) de apoio a uma solucao educativa sobre tecnologia nuclear. Cadastra aplicacoes da tecnologia nuclear (saude, agricultura, industria, energia, pesquisa). Roda em containers Docker numa VM do Azure, com banco Oracle.
